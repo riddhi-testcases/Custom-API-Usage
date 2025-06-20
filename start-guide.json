@@ -1,0 +1,31 @@
+{
+  "title": "Quick Start Commands",
+  "description": "Essential commands to get started",
+  "commands": {
+    "setup": {
+      "command": "npm install",
+      "description": "Install all dependencies"
+    },
+    "start_all": {
+      "command": "npm run dev:all",
+      "description": "Start both API server and frontend"
+    },
+    "start_api": {
+      "command": "npm run server",
+      "description": "Start only the API server"
+    },
+    "start_frontend": {
+      "command": "npm run dev",
+      "description": "Start only the frontend"
+    },
+    "test": {
+      "command": "npm test",
+      "description": "Run API tests"
+    }
+  },
+  "urls": {
+    "dashboard": "http://localhost:3000",
+    "api": "http://localhost:5000/api",
+    "health": "http://localhost:5000/api/health"
+  }
+}
