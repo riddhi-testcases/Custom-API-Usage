@@ -1,6 +1,6 @@
 # Custom API Task Management System
 
-A full-stack task management application built from scratch with custom API endpoints, MongoDB database integration, and a React frontend. This project demonstrates complete CRUD operations, database integration, and custom API development skills.
+A task management application built with custom API endpoints, MongoDB database integration, and a React frontend. This project demonstrates complete CRUD operations, database integration, and custom API development skills. A custom server that exposes self-designed API endpoints to serve and manage data from a connected database, integrated with a frontend for user interaction.
 
 ## Project Overview
 
@@ -10,6 +10,9 @@ This **Custom API Task Usage System** showcases:
 - **Frontend Interface** - React dashboard for API interaction
 - **Full CRUD Operations** - Complete Create, Read, Update, Delete functionality
 - **Real-time Features** - Live dashboard updates and system monitoring
+
+
+> Note: The API status will show as "Connected" when the backend server is running on ur device or hosted environment.
 
 
 ## APIs Created
