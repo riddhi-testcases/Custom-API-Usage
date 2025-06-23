@@ -39,24 +39,28 @@ Comprehensive testing suite for the Custom API Task Usage System with unit, inte
 
 ### All Tests
 
-```npm test
+```
+npm test
 ```
 
 ### Specific Test Types
 
-```npm run test:unit # Unit tests only
+```
+npm run test:unit # Unit tests only
 npm run test:integration # Integration tests only
 npm run test:api # API tests only
 ```
 
 ### Coverage Report
 
-```npm run test:coverage
+```
+npm run test:coverage
 ```
 
 ### Watch Mode
 
-```npm run test:watch
+```
+npm run test:watch
 ```
 
 ## Test Coverage Goals
