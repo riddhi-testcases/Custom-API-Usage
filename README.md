@@ -5,25 +5,27 @@ A task management application built with custom API endpoints, MongoDB database 
 ## Project Overview
 
 This **Custom API Task Usage System** showcases:
+
 - **Custom API Development** - RESTful endpoints built with Express.js
 - **Database Integration** - MongoDB Atlas with Mongoose ODM
 - **Frontend Interface** - React dashboard for API interaction
 - **Full CRUD Operations** - Complete Create, Read, Update, Delete functionality
 - **Real-time Features** - Live dashboard updates and system monitoring
 
-
 > Note: The API status will show as "Connected" when the backend server is running on ur device or hosted environment.
-
 
 ## APIs Created
 
 ### 1. Health Check
+
 - **GET** `/api/health` - Server status and available endpoints
 
 ### 2. System Status  
+
 - **GET** `/api/status` - Database stats and task counts
 
 ### 3. Tasks CRUD
+
 - **GET** `/api/tasks` - Get all tasks (with filtering, search, pagination)
 - **POST** `/api/tasks` - Create new task
 - **GET** `/api/tasks/:id` - Get single task
@@ -31,9 +33,11 @@ This **Custom API Task Usage System** showcases:
 - **DELETE** `/api/tasks/:id` - Delete task
 
 ### 4. Recent Tasks
+
 - **GET** `/api/tasks/recent` - Get recently created tasks
 
 ### 5. Analytics
+
 - **GET** `/api/analytics` - Task analytics and insights
 
 ## Database Integration
@@ -41,8 +45,8 @@ This **Custom API Task Usage System** showcases:
 **MongoDB Atlas** with Mongoose ODM
 
 ### Task Schema
-```
-{
+
+```{
   title: String (required),
   description: String (required), 
   status: String (pending/in-progress/completed/cancelled),
@@ -59,31 +63,32 @@ This **Custom API Task Usage System** showcases:
 ```
 
 ### Connection Setup
-```
-mongoose.connect(process.env.MONGODB_URI)
+
+```mongoose.connect(process.env.MONGODB_URI)
 ```
 
 ## Running the Server
 
 ### Prerequisites
+
 - Node.js 18+
 - MongoDB Atlas account
 
 ### Setup
-```
-npm install
+
+```npm install
 ```
 
 Create `.env` file:
-```
-MONGODB_URI=your_mongodb_connection_string
+
+```MONGODB_URI=your_mongodb_connection_string
 PORT=5000
 NODE_ENV=development
 ```
 
 ### Start Server
-```
-# API server only
+
+```# API server only
 npm run server
 
 # Both API and frontend
@@ -94,27 +99,88 @@ Server runs on `http://localhost:5000`
 
 ## Running Frontend (Optional)
 
-```
-npm run dev
+```npm run dev
 ```
 
 Frontend runs on `http://localhost:3000`
 
+## Testing
+
+### Testing Framework
+
+- **Jest**: Primary testing framework  
+- **Supertest**: HTTP assertion library for API testing  
+- **MongoDB Memory Server**: In-memory MongoDB for testing
+
+### Test Types
+
+#### Unit Tests
+
+npm run test:unit
+
+text
+- Tests business logic and validation
+- Mocks database operations
+- Covers TaskService methods
+
+#### Integration Tests
+
+npm run test:integration
+
+text
+- Tests database interactions
+- Real MongoDB operations
+- CRUD operation verification
+
+#### API Tests
+
+npm run test:api
+
+text
+- Tests HTTP endpoints
+- Request/response validation
+- Error handling verification
+
+### Running All Tests
+
+Run all tests
+npm test
+
+Run with coverage
+npm run test:coverage
+
+Watch mode
+npm run test:watch
+
+text
+
+### Test Coverage
+
+- **Target**: 70%+ code coverage
+- **Metrics**: Lines, Functions, Branches, Statements
+- **Report**: Generated in `coverage/` directory
+
+![Test Coverage]
+
+### Test Results Example ( for unit test)
+
+
+
 ## API Usage Examples
 
 ### Health Check
-```
-curl http://localhost:5000/api/health
+
+```curl http://localhost:5000/api/health
 ```
 
 ### Get All Tasks
-```
-curl http://localhost:5000/api/tasks
+
+```curl http://localhost:5000/api/tasks
 ```
 
 ### Create Task
-```
-curl -X POST http://localhost:5000/api/tasks \
+
+```curl -X POST http://localhost:5000/api/tasks \
   -H "Content-Type: application/json" \
   -d '{
     "title": "Fix login bug",
@@ -126,20 +192,20 @@ curl -X POST http://localhost:5000/api/tasks \
 ```
 
 ### Update Task
-```
-curl -X PUT http://localhost:5000/api/tasks/TASK_ID \
+
+```curl -X PUT http://localhost:5000/api/tasks/TASK_ID \
   -H "Content-Type: application/json" \
   -d '{"status": "completed"}'
 ```
 
 ### Delete Task
-```
-curl -X DELETE http://localhost:5000/api/tasks/TASK_ID
+
+```curl -X DELETE http://localhost:5000/api/tasks/TASK_ID
 ```
 
 ### Search and Filter
-```
-# Search tasks
+
+```# Search tasks
 curl "http://localhost:5000/api/tasks?search=login"
 
 # Filter by status
@@ -150,15 +216,15 @@ curl "http://localhost:5000/api/tasks?status=in-progress&priority=high&limit=10"
 ```
 
 ### Get Analytics
-```
-curl http://localhost:5000/api/analytics
+
+```curl http://localhost:5000/api/analytics
 ```
 
 ## Response Format
 
 ### Success Response
-```
-{
+
+```{
   "success": true,
   "message": "Operation completed",
   "data": {...},
@@ -167,8 +233,8 @@ curl http://localhost:5000/api/analytics
 ```
 
 ### Error Response
-```
-{
+
+```{
   "success": false,
   "message": "Error description",
   "error": "Detailed error"
@@ -177,8 +243,7 @@ curl http://localhost:5000/api/analytics
 
 ## Testing
 
-```
-# Run API tests
+```# Run API tests
 npm test
 
 # Test all endpoints
