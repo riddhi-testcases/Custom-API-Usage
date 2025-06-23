@@ -46,7 +46,8 @@ This **Custom API Task Usage System** showcases:
 
 ### Task Schema
 
-```{
+```
+{
   title: String (required),
   description: String (required), 
   status: String (pending/in-progress/completed/cancelled),
@@ -64,7 +65,8 @@ This **Custom API Task Usage System** showcases:
 
 ### Connection Setup
 
-```mongoose.connect(process.env.MONGODB_URI)
+```
+mongoose.connect(process.env.MONGODB_URI)
 ```
 
 ## Running the Server
@@ -76,19 +78,22 @@ This **Custom API Task Usage System** showcases:
 
 ### Setup
 
-```npm install
+```
+npm install
 ```
 
 Create `.env` file:
 
-```MONGODB_URI=your_mongodb_connection_string
+```
+MONGODB_URI=your_mongodb_connection_string
 PORT=5000
 NODE_ENV=development
 ```
 
 ### Start Server
 
-```# API server only
+```
+# API server only
 npm run server
 
 # Both API and frontend
@@ -99,7 +104,8 @@ Server runs on `http://localhost:5000`
 
 ## Running Frontend (Optional)
 
-```npm run dev
+```
+npm run dev
 ```
 
 Frontend runs on `http://localhost:3000`
@@ -115,28 +121,28 @@ Frontend runs on `http://localhost:3000`
 ### Test Types
 
 #### Unit Tests
-
+```
 npm run test:unit
+```
 
-text
 - Tests business logic and validation
 - Mocks database operations
 - Covers TaskService methods
 
 #### Integration Tests
-
+```
 npm run test:integration
+```
 
-text
 - Tests database interactions
 - Real MongoDB operations
 - CRUD operation verification
 
 #### API Tests
-
+```
 npm run test:api
+```
 
-text
 - Tests HTTP endpoints
 - Request/response validation
 - Error handling verification
@@ -144,15 +150,20 @@ text
 ### Running All Tests
 
 Run all tests
+```
 npm test
+```
 
 Run with coverage
+```
 npm run test:coverage
+```
 
 Watch mode
+```
 npm run test:watch
+```
 
-text
 
 ### Test Coverage
 
@@ -164,23 +175,26 @@ text
 
 ### Test Results Example ( for unit test)
 
-
+![Unit Test Coverage]
 
 ## API Usage Examples
 
 ### Health Check
 
-```curl http://localhost:5000/api/health
+```
+curl http://localhost:5000/api/health
 ```
 
 ### Get All Tasks
 
-```curl http://localhost:5000/api/tasks
+```
+curl http://localhost:5000/api/tasks
 ```
 
 ### Create Task
 
-```curl -X POST http://localhost:5000/api/tasks \
+```
+curl -X POST http://localhost:5000/api/tasks \
   -H "Content-Type: application/json" \
   -d '{
     "title": "Fix login bug",
@@ -193,19 +207,22 @@ text
 
 ### Update Task
 
-```curl -X PUT http://localhost:5000/api/tasks/TASK_ID \
+```
+curl -X PUT http://localhost:5000/api/tasks/TASK_ID \
   -H "Content-Type: application/json" \
   -d '{"status": "completed"}'
 ```
 
 ### Delete Task
 
-```curl -X DELETE http://localhost:5000/api/tasks/TASK_ID
+```
+curl -X DELETE http://localhost:5000/api/tasks/TASK_ID
 ```
 
 ### Search and Filter
 
-```# Search tasks
+```
+# Search tasks
 curl "http://localhost:5000/api/tasks?search=login"
 
 # Filter by status
@@ -217,14 +234,16 @@ curl "http://localhost:5000/api/tasks?status=in-progress&priority=high&limit=10"
 
 ### Get Analytics
 
-```curl http://localhost:5000/api/analytics
+```
+curl http://localhost:5000/api/analytics
 ```
 
 ## Response Format
 
 ### Success Response
 
-```{
+```
+{
   "success": true,
   "message": "Operation completed",
   "data": {...},
@@ -234,7 +253,8 @@ curl "http://localhost:5000/api/tasks?status=in-progress&priority=high&limit=10"
 
 ### Error Response
 
-```{
+```
+{
   "success": false,
   "message": "Error description",
   "error": "Detailed error"
@@ -243,7 +263,8 @@ curl "http://localhost:5000/api/tasks?status=in-progress&priority=high&limit=10"
 
 ## Testing
 
-```# Run API tests
+```
+# Run API tests
 npm test
 
 # Test all endpoints
