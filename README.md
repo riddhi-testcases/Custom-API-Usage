@@ -102,7 +102,7 @@ npm run dev:all
 
 Server runs on `http://localhost:5000`
 
-## Running Frontend (Optional)
+## Running Frontend
 
 ```
 npm run dev
@@ -169,13 +169,16 @@ npm run test:watch
 
 - **Target**: 70%+ code coverage
 - **Metrics**: Lines, Functions, Branches, Statements
-- **Report**: Generated in `coverage/` directory
+- **Report**: Generated in coverage
 
-![Test Coverage]
+![Test Coverage](public/one.png)
+![Test Coverage](public/two.png)
+![Test Coverage](public/three.png)
 
 ### Test Results Example ( for unit test)
+> Above 70%
 
-![Unit Test Coverage]
+![Unit Test Coverage](public/four.png)
 
 ## API Usage Examples
 
